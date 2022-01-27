@@ -1,0 +1,3 @@
+export const HOMES = 'HOMES';
+export const EXPERIENCES = 'EXPERIENCES';
+export const ONLINE_EXPERIENCES = 'ONLINE_EXPERIENCES';
