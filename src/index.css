@@ -336,6 +336,10 @@ input {
   width: 100%;
 }
 
+.header--light {
+  background: #fff;
+}
+
 .header__app-name {
   color: #000;
   font-weight: bold;
@@ -352,6 +356,11 @@ input {
 .header__left svg {
   width: 2rem;
   height: 2rem;
+  fill: white;
+}
+
+.header__left--light svg {
+  fill: #e81e51;
 }
 
 .header__image-wrapper {
@@ -370,7 +379,11 @@ input {
   align-items: center;
   color: #fff;
   display: grid;
-  padding-left: 18rem;
+  padding-left: 17rem;
+}
+
+.header__middle--light {
+  color: #000;
 }
 
 .header__middle-container {
@@ -394,6 +407,10 @@ input {
   width: 1.5rem;
 }
 
+.header__middle-item--light > div {
+  background: #e81e51;
+}
+
 .header__middle-item:hover {
   cursor: pointer;
   opacity: 0.8;
@@ -412,8 +429,16 @@ input {
   padding-right: 2rem;
 }
 
+.header__right--light {
+  color: #000;
+}
+
 .header__action {
   color: #fff;
+}
+
+.header__action--light {
+  color: #000;
 }
 
 .header__right img {
@@ -445,6 +470,10 @@ input {
   background: #000;
 }
 
+.search--light {
+  background: #fff;
+}
+
 .search__container {
   align-items: center;
   display: grid;
@@ -453,7 +482,30 @@ input {
 }
 
 .search__form {
+  background-color: #fff;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1rem 3rem;
   position: relative;
+}
+
+.search__form-element {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #ccc;
+}
+
+.search__form .search__form-element:nth-child(3) {
+  border-right: none;
+}
+
+.search__form-element span {
+  color: #000;
+  font-weight: bold;
+  font-size: 0.875rem;
 }
 
 .search__icon {
@@ -464,19 +516,17 @@ input {
   height: 2rem;
   justify-content: center;
   position: absolute;
-  right: 0.5rem;
-  top: 0.5rem;
+  right: 1rem;
+  top: 1.25rem;
   width: 2rem;
 }
 
 .search__container input {
   background: #fff;
-  border-radius: 999px;
   border: none;
   color: #000;
   outline: none;
-  padding: 1rem;
-  width: 20rem;
+  padding-top: 0.5rem;
 }
 
 .home {
@@ -487,7 +537,7 @@ input {
 
 .home img {
   border-radius: 1rem;
-  height: 420px;
+  height: calc(100vh - 10rem);
   object-fit: cover;
   width: 100%;
 }
@@ -650,43 +700,259 @@ input {
 }
 
 .house {
-  border-bottom: 1px solid white;
-  display: flex;
-  gap: 1rem;
-  margin: 0 auto;
+  border-bottom: 1px solid #ccc;
+  grid-gap: 1rem;
+  margin: 0 4rem;
   padding: 2rem 0;
-  width: 68%;
+  display: grid;
+  grid-template-columns: max-content 1fr;
 }
 
 .house img {
   border-radius: 1rem;
-  height: 10rem;
+  height: 12.5rem;
   object-fit: cover;
-  width: 10rem;
+  width: 18.75rem;
 }
 
 .house__info {
-  color: #fff;
+  color: #000;
+  position: relative;
+  width: 100%;
 }
 
-.house__info p {
-  padding-bottom: 1rem;
+.house__title {
+  color: #717171;
+  font-size: 0.875rem;
+  padding-bottom: 0.5rem;
 }
 
-.house__info button {
-  background: #e81e51;
-  border-radius: 999px;
-  border: none;
-  color: #fff;
-  outline: none;
-  padding: 0.5rem 1rem;
+.house__name {
+  color: #000;
 }
 
-.house__info button:hover { 
-  cursor: pointer;
-  opacity: 0.8;
+.house__divider {
+  background: #ccc;
+  height: 1px;
+  width: 2rem;
+  margin: 0.5rem 0;
+}
+
+.house__description {
+  color: #717171;
+  font-size: 0.875rem;
+  padding-bottom: 0.5rem;
+}
+
+.house__rating {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  gap: 0.25rem;
+  position: absolute;
+}
+
+.house__rating svg {
+  fill: #ff385c;
+}
+
+.house__price {
+  align-items: center;
+  bottom: 0;
+  position: absolute;
+  right: 0;
+}
+
+.house__price-value {
+  color: #000;
+  font-weight: bold;
 }
 
 .chat__container {
   height: calc(100vh - 7rem);
+}
+
+.house-detail {
+  min-height: 100vh;
+  overflow: auto;
+  padding: 0 4rem;
+}
+
+.house-detail__name {
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+
+.house-detail__sub {
+  display: flex;
+  gap: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.house-detail__rating {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.house-detail__rating svg {
+  fill: #ff385c;
+}
+
+.house-detail__address {
+  color: #717171;
+  text-decoration: underline;
+}
+
+.house-detail__images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 18.75rem;
+  max-height: 18.75rem;
+  grid-gap: 0.5rem;
+}
+
+.house-detail__images-left {
+  height: 100%;
+  max-height: 100%;
+  width: 100%;
+}
+
+.house-detail__images-left img {
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.house-detail__images-right {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  height: 18.75rem;
+  max-height: 18.75rem;
+  width: 100%;
+}
+
+.house-detail__images-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.house-detail__images-right img:nth-child(2) {
+  border-top-right-radius: 1rem;
+}
+
+.house-detail__images-right img:nth-child(4) {
+  border-bottom-right-radius: 1rem;
+}
+
+.house-detail__body {
+  display: grid;
+  grid-template-columns: 53% 45%;
+  grid-gap: 2%;
+}
+
+.house__des-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 13rem;
+}
+
+.house__des-right {
+  display: grid;
+  justify-content: right;
+}
+
+.house__des-right img {
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+}
+
+.house__des h3 {
+  color: #000;
+}
+
+.house__des-content {
+  color: #717171;
+  font-size: 0.875rem;
+  padding: 0.5rem 0;
+}
+
+.house__des-divider {
+  background: #ccc;
+  height: 1px;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.house__des-note {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+.house__des-note > div p:nth-child(1) {
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+}
+
+.house__des-note > div p:nth-child(2) {
+  color: #717171;
+  font-size: 0.875rem;
+}
+
+.house-detail-form {
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: rgb(0 0 0 / 12%) 0px 0.375rem 2rem;
+  margin-top: 13rem;
+  height: 8rem;
+}
+
+
+.house-detail-form__price-value {
+  color: #000;
+  font-weight: bold;
+}
+
+.house-detail-form__header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.house-detail-form__rating {
+  display: grid;
+  justify-content: right;
+}
+
+.house-detail-form__actions {
+  align-items: center;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr max-content 1fr;
+  padding: 1rem 0;
+}
+
+.house-detail-form__actions span {
+  font-weight: bold;
+}
+
+.house-detail-form__actions button {
+  background: #e81e51;
+  border-radius: 0.5rem;
+  border: none;
+  color: #fff;
+  outline: none;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.house-detail-form__actions button:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }

@@ -38,7 +38,9 @@ const Create = ({ toggleModal }) => {
         uiService.showLoading();
         const id = uuidv4();
         const createdBy = user.id;
-        const createdHouse = { id, createdBy, name, price, description, address };
+        const ownerName = user.fullname;
+        const ownerImage = user.avatar;
+        const createdHouse = { id, createdBy, name, price, description, address, ownerName, ownerImage };
         firebaseService.upload({ key: FIREBASE_KEYS.HOUSES, id, payload: imageToHouse, entity: createdHouse, callback: onImageUploaded })
         uiService.hideLoading();
         toggleModal(false);

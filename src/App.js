@@ -9,6 +9,7 @@ import Chat from './components/chat/Chat';
 import ChatWithHost from './components/chat/ChatWithHost';
 import Header from './components/common/Header';
 import Home from './components/home/Home';
+import HouseDetail from './components/detail/HouseDetail';
 import Loading from './components/common/Loading';
 import Login from './components/login/Login';
 import PrivateRoute from './components/common/PrivateRoute';
@@ -28,6 +29,7 @@ function App() {
           <PrivateRoute exact path="/search" component={SearchResults} />
           <PrivateRoute exact path="/chat" component={Chat} />
           <PrivateRoute exact path="/host" component={ChatWithHost} />
+          <PrivateRoute exact path="/detail" component={HouseDetail} />
           <Route exact path="/login">
             <Login />
           </Route>

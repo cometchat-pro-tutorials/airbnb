@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 
 import Houses from '../houses/Houses';
 
+import * as uiService from '../../services/ui';
 import * as FIREBASE_KEYS from '../../constants/firebase-keys';
 import * as firebaseService from '../../services/firebase';
 import * as STORAGE_KEYS from '../../constants/storage-keys';
@@ -38,6 +39,12 @@ const SearchResults = () => {
       tempRef.off();
     };
   }, [tempRef]);
+
+  useEffect(() => {
+    window.onload = function () {
+      uiService.showLightHeader();
+    }
+  }, []);
 
   return (
     <div className="search-results">

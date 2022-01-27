@@ -2,10 +2,14 @@ import { useEffect } from 'react';
 
 import bg from '../../images/bg.webp';
 
+import * as uiService from '../../services/ui';
+
 const Home = () => {
 
   useEffect(() => {
-    document.body.style.background = "#000";
+    window.onload = function () {
+      uiService.showDarkHeader();
+    }
   }, []);
 
   return (
