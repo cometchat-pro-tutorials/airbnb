@@ -51,7 +51,7 @@ const SignUp = (props) => {
     const fullname = fullnameRef.current.value;
     const email = emailRef.current.value;
     const work = workRef.current.value;
-    const address = workRef.current.value;
+    const address = addressRef.current.value;
     const about = aboutRef.current.value;
     const role = roleRef.current.value;
     const password = passwordRef.current.value;
