@@ -41,6 +41,7 @@ const Header = ({ toggleModal }) => {
   };
 
   const chat = () => {
+    uiService.showLightHeader();
     routeService.navigate({ route: ROUTES.CHAT, push: history.push });
   };
 
