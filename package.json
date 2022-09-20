@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@cometchat-pro/chat": "3.0.0",
+    "@cometchat-pro/chat": "3.0.10",
     "@emotion/core": "^10.0.35",
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
